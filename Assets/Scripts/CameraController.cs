@@ -35,6 +35,7 @@ public class CameraController : MonoBehaviour
     {
         MoveByKB();
         Zoom();
+        MoveByMouse();
     }
 
     private void MoveByKB()
@@ -64,5 +65,17 @@ public class CameraController : MonoBehaviour
 
         cam.orthographicSize += zoomModifier;
         cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, 4, 10);
+    }
+
+    private void MoveByMouse()
+    {
+        if (Input.mousePosition.x >= Screen.width)
+            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime, Space.World);
+        if (Input.mousePosition.x <= 0f)
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime, Space.World);
+        if (Input.mousePosition.y >= Screen.height)
+            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.World);
+        if (Input.mousePosition.y <= 0f)
+            transform.Translate(Vector3.back * moveSpeed * Time.deltaTime, Space.World);
     }
 }
