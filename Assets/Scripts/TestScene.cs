@@ -35,4 +35,13 @@ public class TestScene : MonoBehaviour
             character[i].Anim.SetTrigger("Die");
         }
     }
+
+    public void SetHit()
+    {
+        for(int i = 0; i < character.Length; i++)
+        {
+            character[i].SetState(CharState.Hit);
+            character[i].Anim.SetTrigger("Hit");
+        }
+    }
 }
