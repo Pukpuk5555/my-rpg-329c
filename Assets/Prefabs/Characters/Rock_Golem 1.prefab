@@ -1876,7 +1876,7 @@ GameObject:
   - component: {fileID: -2325891182830684340}
   - component: {fileID: 2904770251801116188}
   - component: {fileID: 1827205492892091890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_Golem 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
