@@ -23,6 +23,9 @@ public class LeftClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetMouseButtonDown(0))
+            ClearEverything();
+        
         if(Input.GetMouseButtonUp(0))
             TrySelect(Input.mousePosition);
     }
@@ -31,6 +34,9 @@ public class LeftClick : MonoBehaviour
     {
         curChar = hit.collider.GetComponent<Character>();
         Debug.Log("Select Char: " + hit.collider.gameObject);
+        
+        if(CurChar != null)
+            curChar.ToggleSelection(true);
     }
 
     private void TrySelect(Vector2 screenPos)
@@ -48,5 +54,17 @@ public class LeftClick : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private void ClearRingSelection()
+    {
+        if(curChar != null)
+            curChar.ToggleSelection(false);
+    }
+
+    private void ClearEverything()
+    {
+        ClearRingSelection();
+        curChar = null;
     }
 }

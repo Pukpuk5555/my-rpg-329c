@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cd5d12a-aa6d-4a66-a70f-fbe6478b947e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/RightClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/RightClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-rpg-329c/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-rpg-329c/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Hero_Knight_Female 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Hero_Knight_Female 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/LeftClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/LeftClick.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc9f39ef344c47699635b8624c64f91b34600/93/75da7d05/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Command/LeftClick.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -70,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737189462782</updated>
       <workItem from="1737189474597" duration="1000" />
-      <workItem from="1739001585569" duration="2773000" />
+      <workItem from="1739001585569" duration="3876000" />
     </task>
     <servers />
   </component>
