@@ -130,9 +130,9 @@ GameObject:
   - component: {fileID: 103838220}
   - component: {fileID: 103838219}
   - component: {fileID: 103838218}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -937,6 +937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc2a7c3a2b5aea4f9d0cfd53a5b9293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1114973902
 MonoBehaviour:
   m_ObjectHideFlags: 0
