@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
+using Unity.VisualScripting;
 
 public enum CharState
 {
@@ -28,6 +30,7 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected Character curCharTarget;
 
     [SerializeField] protected float attackRange = 2f;
+    [SerializeField] protected int attackDamage = 3;
 
     [SerializeField] protected float attackCoolDown = 2f;
     [SerializeField] protected float attackTimer = 0f;
@@ -114,6 +117,9 @@ public abstract class Character : MonoBehaviour
     {
         transform.LookAt(curCharTarget.transform);
         anim.SetTrigger("Attack");
+        
+        //attack logic
+        AttackLogic();
     }
 
     protected void AttackUpdate()
@@ -138,5 +144,42 @@ public abstract class Character : MonoBehaviour
         
         if(distance > attackRange)
             SetState(CharState.WalkToEnemy);
+    }
+
+    protected virtual IEnumerator DestroyObject()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
+
+    protected virtual void Die()
+    {
+        navMeshAgent.isStopped = true;
+        SetState(CharState.Die);
+        
+        anim.SetTrigger("Die");
+
+        StartCoroutine(DestroyObject());
+    }
+
+    public void RecieveDamage(Character enemy)
+    {
+        if(curHP <= 0 || state == CharState.Die)
+            return;
+
+        curHP -= enemy.attackDamage;
+        if (curHP <= 0)
+        {
+            curHP = 0;
+            Die();
+        }
+    }
+
+    protected void AttackLogic()
+    {
+        Character target = curCharTarget.GetComponent<Character>();
+        
+        if(target != null)
+            target.RecieveDamage(this);
     }
 }
