@@ -1192,6 +1192,7 @@ GameObject:
   - component: {fileID: -9016477291291206003}
   - component: {fileID: -2106875231602237193}
   - component: {fileID: -1278932241392501159}
+  - component: {fileID: -9212431165425236415}
   m_Layer: 6
   m_Name: Hero_Knight_Female 1
   m_TagString: Hero
@@ -1312,6 +1313,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  curHP: 10
+  curCharTarget: {fileID: 0}
+  attackRange: 2
+  attackDamage: 3
+  attackCoolDown: 2
+  attackTimer: 0
+  findingRange: 20
   ringSelection: {fileID: 3037115529630725935}
 --- !u!114 &-1278932241392501159
 MonoBehaviour:
@@ -1325,6 +1333,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002cd71b4f434fa4bbf04c6b28242e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-9212431165425236415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbe6ef47b96c2e408d9b9e59e26f47d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curEnemy: {fileID: 0}
 --- !u!1 &133228
 GameObject:
   m_ObjectHideFlags: 0
