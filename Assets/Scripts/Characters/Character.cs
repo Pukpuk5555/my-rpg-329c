@@ -29,11 +29,19 @@ public abstract class Character : MonoBehaviour
 
     [SerializeField] protected Character curCharTarget;
 
+    public Character CurCharTarget
+    { get { return curCharTarget; } set { curCharTarget = value; } }
+
     [SerializeField] protected float attackRange = 2f;
+    public float AttackRange { get { return attackDamage; } }
+    
     [SerializeField] protected int attackDamage = 3;
 
     [SerializeField] protected float attackCoolDown = 2f;
     [SerializeField] protected float attackTimer = 0f;
+
+    [SerializeField] protected float findingRange = 20f;
+    public float FindingRange { get { return findingRange; } }
 
     [SerializeField]
     protected GameObject ringSelection;
@@ -181,5 +189,18 @@ public abstract class Character : MonoBehaviour
         
         if(target != null)
             target.RecieveDamage(this);
+    }
+
+    public bool IsMyEnemy(string targetTag)
+    {
+        string myTag = gameObject.tag;
+
+        if ((myTag == "Hero" || myTag == "Player") && targetTag == "Enemy")
+            return true;
+
+        if (myTag == "Enemy" && (targetTag == "Hero" || targetTag == "Player"))
+            return true;
+
+        return false;
     }
 }
