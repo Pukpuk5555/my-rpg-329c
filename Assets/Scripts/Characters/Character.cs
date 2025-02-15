@@ -94,7 +94,7 @@ public abstract class Character : MonoBehaviour
 
     protected void WalkToEnemyUpdate()
     {
-        if (curCharTarget = null)
+        if (curCharTarget == null)
         {
             SetState(CharState.Idle);
             return;
@@ -102,8 +102,41 @@ public abstract class Character : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, 
             curCharTarget.transform.position);
-        
-        if(distance <= attackRange)
+
+        if (distance <= attackRange)
+        {
             SetState(CharState.Attack);
+            Attack();
+        }
+    }
+
+    protected void Attack()
+    {
+        transform.LookAt(curCharTarget.transform);
+        anim.SetTrigger("Attack");
+    }
+
+    protected void AttackUpdate()
+    {
+        if (curCharTarget == null || curCharTarget.CurHP <= 0)
+        {
+            SetState(CharState.Idle);
+            return;
+        }
+
+        navMeshAgent.isStopped = true;
+
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackCoolDown)
+        {
+            attackTimer = 0f;
+            Attack();
+        }
+
+        float distance = Vector3.Distance(transform.position,
+            curCharTarget.transform.position);
+        
+        if(distance > attackRange)
+            SetState(CharState.WalkToEnemy);
     }
 }
