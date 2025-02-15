@@ -111,6 +111,8 @@ public abstract class Character : MonoBehaviour
             return;
         }
 
+        navMeshAgent.SetDestination(curCharTarget.transform.position);
+
         float distance = Vector3.Distance(transform.position, 
             curCharTarget.transform.position);
 
@@ -149,9 +151,13 @@ public abstract class Character : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position,
             curCharTarget.transform.position);
-        
-        if(distance > attackRange)
+
+        if (distance > attackRange)
+        {
             SetState(CharState.WalkToEnemy);
+            navMeshAgent.SetDestination(curCharTarget.transform.position);
+            navMeshAgent.isStopped = false;
+        }
     }
 
     protected virtual IEnumerator DestroyObject()
