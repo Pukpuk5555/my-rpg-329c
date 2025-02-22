@@ -22,4 +22,16 @@ public class UIManager : MonoBehaviour
                 ai.enabled = isOn;
         }
     }
+
+    public void SelectAll()
+    {
+        foreach (Character member in PartyManager.instance.Members)
+        {
+            if (member.CurHP > 0)
+            {
+                member.ToggleSelection(true);
+                PartyManager.instance.SelectChars.Add(member);
+            }
+        }
+    }
 }
