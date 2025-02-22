@@ -134,7 +134,10 @@ public abstract class Character : MonoBehaviour
 
     protected void AttackUpdate()
     {
-        if (curCharTarget == null || curCharTarget.CurHP <= 0)
+        if (curCharTarget == null)
+            return;;
+
+        if (curCharTarget.CurHP <= 0)
         {
             SetState(CharState.Idle);
             return;
