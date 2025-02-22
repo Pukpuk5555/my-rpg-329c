@@ -1,15 +1,26 @@
+using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private RectTransform selectionBox;
     public RectTransform SelectionBox { get { return selectionBox; } }
 
+    [SerializeField] private Toggle togglePauseUnpause;
+
     public static UIManager instance;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            togglePauseUnpause.isOn = !togglePauseUnpause.isOn;
     }
 
     public void ToogleAI(bool isOn)
@@ -33,5 +44,10 @@ public class UIManager : MonoBehaviour
                 PartyManager.instance.SelectChars.Add(member);
             }
         }
+    }
+
+    public void PauseUnpause(bool isOn)
+    {
+        Time.timeScale = isOn ? 0 : 1;
     }
 }
