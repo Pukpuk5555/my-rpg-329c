@@ -91,7 +91,7 @@ public class LeftClick : MonoBehaviour
         PartyManager.instance.SelectChars.Clear();
     }
 
-    private void UpdateSelectionBox(Vector3 mousePos)
+    private void UpdateSelectionBox(Vector2 mousePos)
     {
         //set active to selection box if it isn't active
         Debug.Log("Mouse Pos - " + mousePos);
