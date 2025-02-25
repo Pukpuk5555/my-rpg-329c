@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2091945127677854330}
   - component: {fileID: 661119132843464616}
   m_Layer: 5
-  m_Name: Input_FantasyWarrior_KeyButton
+  m_Name: Input_FantasyWarrior_KeyButton01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,11 +27,11 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5189019580266598155}
   - {fileID: 5733738896241954669}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -69,6 +69,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2091945127677854330}
     m_Modifications:
     - target: {fileID: 2846957297159583125, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
@@ -113,7 +114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652071920112151645, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4652071920112151645, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_AnchorMin.x
@@ -121,11 +122,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652071920112151645, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4652071920112151645, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4652071920112151645, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_SizeDelta.y
@@ -137,7 +138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652071920112151645, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 6795509233003570378, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_VerticalFit
@@ -166,6 +167,10 @@ PrefabInstance:
     - target: {fileID: 7084558427549819277, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7710660553418058577, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 3999849769087833685, guid: 4c7d5e5a650f70d408d2f1e5cff1c014, type: 3}
       propertyPath: m_Name
@@ -256,6 +261,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2658f4bb727741247a6009e0aa7e6d24, type: 3}
 --- !u!224 &5189019580266598155 stripped
 RectTransform:
@@ -267,6 +275,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2091945127677854330}
     m_Modifications:
     - target: {fileID: 1108524925217797663, guid: f152af95d712fd142a63fb4e92db289d, type: 3}
@@ -398,6 +407,9 @@ PrefabInstance:
       value: Input_Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f152af95d712fd142a63fb4e92db289d, type: 3}
 --- !u!224 &5733738896241954669 stripped
 RectTransform:
