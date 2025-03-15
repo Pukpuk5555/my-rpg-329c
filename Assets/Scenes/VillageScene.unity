@@ -1528,7 +1528,19 @@ MonoBehaviour:
   m_Group: {fileID: 2086869065}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 991262806}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectMagicSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &345688071
 GameObject:
@@ -1826,7 +1838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 487758, guid: cd0f3f089be387d46b89f916ca2d2cdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.54
+      value: 60.04
       objectReference: {fileID: 0}
     - target: {fileID: 487758, guid: cd0f3f089be387d46b89f916ca2d2cdd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1834,7 +1846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 487758, guid: cd0f3f089be387d46b89f916ca2d2cdd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.676903
+      value: 44.83
       objectReference: {fileID: 0}
     - target: {fileID: 487758, guid: cd0f3f089be387d46b89f916ca2d2cdd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5286,6 +5298,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionBox: {fileID: 1305331318}
   togglePauseUnpause: {fileID: 759306874}
+  toggleMagic:
+  - {fileID: 1950362238}
+  - {fileID: 335461623}
+  - {fileID: 1156891233}
+  - {fileID: 2025681713}
+  curToggleMagicID: -1
 --- !u!1 &1012521442
 GameObject:
   m_ObjectHideFlags: 0
@@ -6084,7 +6102,19 @@ MonoBehaviour:
   m_Group: {fileID: 2086869065}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 991262806}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectMagicSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1197796586
 GameObject:
@@ -6386,7 +6416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422474, guid: 7b1f1a0597cefe443a0b7be497359209, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.73
+      value: 38.45
       objectReference: {fileID: 0}
     - target: {fileID: 422474, guid: 7b1f1a0597cefe443a0b7be497359209, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6394,7 +6424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 422474, guid: 7b1f1a0597cefe443a0b7be497359209, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.75
+      value: 39.14
       objectReference: {fileID: 0}
     - target: {fileID: 422474, guid: 7b1f1a0597cefe443a0b7be497359209, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9063,7 +9093,19 @@ MonoBehaviour:
   m_Group: {fileID: 2086869065}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 991262806}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectMagicSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1970265179
 GameObject:
@@ -9533,7 +9575,19 @@ MonoBehaviour:
   m_Group: {fileID: 2086869065}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 991262806}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectMagicSkill
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &2062019945
 GameObject:
