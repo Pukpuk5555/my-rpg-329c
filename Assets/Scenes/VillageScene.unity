@@ -2938,7 +2938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 249.8383}
+  m_AnchoredPosition: {x: 0.00012207031, y: 249.83832}
   m_SizeDelta: {x: 0.0002, y: -534.8854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &636436483
@@ -5031,6 +5031,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doubleRingMarker: {fileID: 6044037666520248651, guid: 85d71e178139b6848a31e7504e289361, type: 3}
+  magicVFX:
+  - {fileID: 1236643204216662, guid: 2d2b4ba88882dd84ca165eaabb644ecf, type: 3}
+  - {fileID: 1392961458021664, guid: d85afc398c403e2479efb42bb63e16e0, type: 3}
 --- !u!114 &1114973905
 MonoBehaviour:
   m_ObjectHideFlags: 0
