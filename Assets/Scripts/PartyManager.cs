@@ -28,8 +28,8 @@ public class PartyManager : MonoBehaviour
 
         SelectSingleHero(0);
 
-        members[0].MagicSkills.Add(new Magic(0, "Power Glow", 10f, 20, 3f, 1f, 2, 2));
-        members[1].MagicSkills.Add(new Magic(0, "Fire Ball", 10f, 35, 3f, 4f, 0, 1));
+        members[0].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[0]));
+        members[1].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[1]));
 
         UIManager.instance.ShowMagicToggles();
     }
