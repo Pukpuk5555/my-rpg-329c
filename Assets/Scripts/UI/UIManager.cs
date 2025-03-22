@@ -103,11 +103,38 @@ public class UIManager : MonoBehaviour
         {
             inventoryPanel.SetActive(true);
             blackImage.SetActive(true);
+            ShowInventory();
         }
         else
         {
             inventoryPanel.SetActive(false);
             blackImage.SetActive(false);
+        }
+    }
+
+    public void ShowInventory()
+    {
+        if(PartyManager.instance.SelectChars.Count <= 0)
+            return;
+        
+        //show inventory only the single selected hero
+        Character hero = PartyManager.instance.SelectChars[0];
+        
+        //clear slot
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].transform.childCount > 0)
+            {
+                Transform child = slots[i].transform.GetChild(0);
+                Destroy(child.gameObject);
+            }
+        }
+        
+        //show items
+        for (int i = 0; i < hero.InventoryItems.Count; i++)
+        {
+            GameObject itemObj = Instantiate(itemUIPrefabs, slots[i].transform);
+            itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
         }
     }
 }
