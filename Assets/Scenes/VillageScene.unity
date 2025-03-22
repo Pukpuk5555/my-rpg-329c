@@ -6189,8 +6189,8 @@ MonoBehaviour:
   - {fileID: 1156891233}
   - {fileID: 2025681713}
   curToggleMagicID: -1
-  blackImage: {fileID: 0}
-  inventoryPanel: {fileID: 0}
+  blackImage: {fileID: 343595750}
+  inventoryPanel: {fileID: 595094698}
 --- !u!1001 &1005297692
 PrefabInstance:
   m_ObjectHideFlags: 0
