@@ -21,6 +21,10 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject inventoryPanel;
 
+    [SerializeField] private GameObject itemUIPrefabs;
+
+    [SerializeField] private GameObject[] slots;
+
     public static UIManager instance;
 
     private void Awake()
