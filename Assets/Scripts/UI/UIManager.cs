@@ -17,6 +17,10 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private int curToggleMagicID = -1;
 
+    [SerializeField] private GameObject blackImage;
+
+    [SerializeField] private GameObject inventoryPanel;
+
     public static UIManager instance;
 
     private void Awake()
@@ -28,6 +32,9 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
             togglePauseUnpause.isOn = !togglePauseUnpause.isOn;
+
+        if (Input.GetKeyDown(KeyCode.I))
+            ToggleInventoryPanel();
     }
 
     public void ToogleAI(bool isOn)
@@ -84,5 +91,19 @@ public class UIManager : MonoBehaviour
     public void IsOnCurToggleMagic(bool flag)
     {
         toggleMagic[curToggleMagicID].isOn = flag;
+    }
+
+    public void ToggleInventoryPanel()
+    {
+        if (!inventoryPanel.activeInHierarchy)
+        {
+            inventoryPanel.SetActive(true);
+            blackImage.SetActive(true);
+        }
+        else
+        {
+            inventoryPanel.SetActive(false);
+            blackImage.SetActive(false);
+        }
     }
 }
