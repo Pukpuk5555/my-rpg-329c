@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 1
   itemName: Sword A
   type: 2
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 21aceb24232c61c46adb5af50da283a6, type: 3}
   power: 20
