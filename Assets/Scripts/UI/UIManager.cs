@@ -17,6 +17,14 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private int curToggleMagicID = -1;
 
+    [SerializeField] private GameObject blackImage;
+
+    [SerializeField] private GameObject inventoryPanel;
+
+    [SerializeField] private GameObject itemUIPrefabs;
+
+    [SerializeField] private GameObject[] slots;
+
     public static UIManager instance;
 
     private void Awake()
@@ -28,6 +36,9 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
             togglePauseUnpause.isOn = !togglePauseUnpause.isOn;
+
+        if (Input.GetKeyDown(KeyCode.I))
+            ToggleInventoryPanel();
     }
 
     public void ToogleAI(bool isOn)
@@ -84,5 +95,46 @@ public class UIManager : MonoBehaviour
     public void IsOnCurToggleMagic(bool flag)
     {
         toggleMagic[curToggleMagicID].isOn = flag;
+    }
+
+    public void ToggleInventoryPanel()
+    {
+        if (!inventoryPanel.activeInHierarchy)
+        {
+            inventoryPanel.SetActive(true);
+            blackImage.SetActive(true);
+            ShowInventory();
+        }
+        else
+        {
+            inventoryPanel.SetActive(false);
+            blackImage.SetActive(false);
+        }
+    }
+
+    public void ShowInventory()
+    {
+        if(PartyManager.instance.SelectChars.Count <= 0)
+            return;
+        
+        //show inventory only the single selected hero
+        Character hero = PartyManager.instance.SelectChars[0];
+        
+        //clear slot
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].transform.childCount > 0)
+            {
+                Transform child = slots[i].transform.GetChild(0);
+                Destroy(child.gameObject);
+            }
+        }
+        
+        //show items
+        for (int i = 0; i < hero.InventoryItems.Count; i++)
+        {
+            GameObject itemObj = Instantiate(itemUIPrefabs, slots[i].transform);
+            itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
+        }
     }
 }
