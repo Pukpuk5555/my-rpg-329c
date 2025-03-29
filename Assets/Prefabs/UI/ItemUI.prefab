@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8554542701391116694}
   - component: {fileID: 1249909811876670930}
   - component: {fileID: 5362361207749488777}
+  - component: {fileID: -981084573642292569}
   m_Layer: 5
   m_Name: ItemUI
   m_TagString: Untagged
@@ -75,3 +76,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-981084573642292569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400352419515931114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71294534f4d5a3045a0882132e974eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    id: 0
+    itemName: 
+    type: 0
+    icon: {fileID: 0}
+    power: 0
+  iconParent: {fileID: 0}
+  image: {fileID: 5362361207749488777}
