@@ -17,7 +17,7 @@ public class InventoryManager : MonoBehaviour
         set { itemDatas = value; }
     }
 
-    private const int MAXSLOT = 16;
+    public const int MAXSLOT = 16;
 
     public static InventoryManager instance;
 
@@ -42,15 +42,15 @@ public class InventoryManager : MonoBehaviour
     {
         Item item = new Item(itemDatas[id]);
 
-        if (character.InventoryItems.Count < MAXSLOT)
+        for (int i = 0; i < character.InventoryItems.Length; i++)
         {
-            character.InventoryItems.Add(item);
-            return true;
+            if(character.InventoryItems[i] == null)
+            {
+                character.InventoryItems[i] = item;
+                return true;
+            }
         }
-        else
-        {
-            Debug.Log("Inventory Full");
-            return false;
-        }
+        Debug.Log("Inventory Full");
+        return false;
     }
 }

@@ -131,7 +131,7 @@ public class UIManager : MonoBehaviour
         }
         
         //show items
-        for (int i = 0; i < hero.InventoryItems.Count; i++)
+        for (int i = 0; i < hero.InventoryItems.Length; i++)
         {
             GameObject itemObj = Instantiate(itemUIPrefabs, slots[i].transform);
             itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
