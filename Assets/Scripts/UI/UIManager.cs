@@ -109,6 +109,7 @@ public class UIManager : MonoBehaviour
         {
             inventoryPanel.SetActive(false);
             blackImage.SetActive(false);
+            ClearInventory();
         }
     }
 
@@ -120,6 +121,16 @@ public class UIManager : MonoBehaviour
         //show inventory only the single selected hero
         Character hero = PartyManager.instance.SelectChars[0];
         
+        //show items
+        for (int i = 0; i < hero.InventoryItems.Length; i++)
+        {
+            GameObject itemObj = Instantiate(itemUIPrefabs, slots[i].transform);
+            itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
+        }
+    }
+
+    public void ClearInventory()
+    {
         //clear slot
         for (int i = 0; i < slots.Length; i++)
         {
@@ -128,13 +139,6 @@ public class UIManager : MonoBehaviour
                 Transform child = slots[i].transform.GetChild(0);
                 Destroy(child.gameObject);
             }
-        }
-        
-        //show items
-        for (int i = 0; i < hero.InventoryItems.Length; i++)
-        {
-            GameObject itemObj = Instantiate(itemUIPrefabs, slots[i].transform);
-            itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
         }
     }
 }
