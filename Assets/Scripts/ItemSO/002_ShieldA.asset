@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 2
   itemName: Shield A
   type: 2
-  icon: {fileID: 21300000, guid: 98498b833764267479a46aed6f7f8e05, type: 3}
+  icon: {fileID: 21300000, guid: 739baa73cc8146d4c98ae5b4b6e79776, type: 3}
   power: 5
   prefabID: 2
