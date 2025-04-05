@@ -17,7 +17,7 @@ public class InventoryManager : MonoBehaviour
         set { itemDatas = value; }
     }
 
-    public const int MAXSLOT = 16;
+    public const int MAXSLOT = 17;
 
     public static InventoryManager instance;
 
