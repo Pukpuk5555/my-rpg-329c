@@ -1321,6 +1321,36 @@ MonoBehaviour:
   attackTimer: 0
   findingRange: 20
   ringSelection: {fileID: 3037115529630725935}
+  magicSkills: []
+  curMagicCast:
+    id: 0
+    name: 
+    icon: {fileID: 0}
+    range: 0
+    power: 0
+    loadTime: 0
+    shootTime: 0
+    loadId: 0
+    shootId: 0
+  isMagicMode: 0
+  inventoryItems: []
+  mainWeapon:
+    id: 0
+    itemName: 
+    type: 0
+    icon: {fileID: 0}
+    power: 0
+    prefabID: 0
+  shield:
+    id: 0
+    itemName: 
+    type: 0
+    icon: {fileID: 0}
+    power: 0
+    prefabID: 0
+  shieldHand: {fileID: 479758}
+  shieldObj: {fileID: 0}
+  defensePower: 0
 --- !u!114 &-1278932241392501159
 MonoBehaviour:
   m_ObjectHideFlags: 0
