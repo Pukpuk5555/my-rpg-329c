@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
+using NUnit.Framework;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -10,11 +12,11 @@ public class InventoryManager : MonoBehaviour
         set { itemPrefabs = value; }
     }
 
-    [SerializeField] private ItemData[] itemDatas;
+    [SerializeField] private ItemData[] itemData;
     public ItemData[] ItemDatas
     {
-        get { return itemDatas; }
-        set { itemDatas = value; }
+        get { return itemData; }
+        set { itemData = value; }
     }
 
     public const int MAXSLOT = 17;
@@ -40,7 +42,7 @@ public class InventoryManager : MonoBehaviour
 
     public bool AddItem(Character character, int id)
     {
-        Item item = new Item(itemDatas[id]);
+        Item item = new Item(itemData[id]);
 
         for (int i = 0; i < character.InventoryItems.Length; i++)
         {
@@ -82,5 +84,24 @@ public class InventoryManager : MonoBehaviour
                 PartyManager.instance.SelectChars[0].UnEquipShield();
                 break;
         }
+    }
+
+    public bool CheckPartyForItem(int id)
+    {
+        Item item = new Item(itemData[id]);
+        Debug.Log(item.ItemName);
+
+        List<Character> party = PartyManager.instance.Members;
+
+        foreach (Character hero in party)
+        {
+            for (int i = 0; i < hero.InventoryItems.Length; i++)
+            {
+                Debug.Log(hero.InventoryItems[i].ItemName);
+                if (hero.InventoryItems[i].ID == item.ID)
+                    return true;
+            }
+        }
+        return false;
     }
 }

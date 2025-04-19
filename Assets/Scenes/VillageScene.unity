@@ -6843,6 +6843,7 @@ GameObject:
   - component: {fileID: 1114973904}
   - component: {fileID: 1114973905}
   - component: {fileID: 1114973906}
+  - component: {fileID: 1114973907}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6947,12 +6948,40 @@ MonoBehaviour:
   - {fileID: 149276, guid: 61d808fe403d0364e9f34b6850a070c0, type: 3}
   - {fileID: 129334, guid: c9e6334800a08c04faeab26e744f3fe7, type: 3}
   - {fileID: 156772, guid: 72e2ffc6019dfa24b8832b5cf4a9b921, type: 3}
-  itemDatas:
-  - {fileID: 11400000, guid: f2aa937274cc1ff4881eae0da0600216, type: 2}
-  - {fileID: 11400000, guid: 444a0857b7e353a408bf8ad77ffab1e3, type: 2}
-  - {fileID: 11400000, guid: e48304c075dd38447a49caf74494a31d, type: 2}
-  - {fileID: 11400000, guid: 1af23a5514b557a41955d4e5d70bb815, type: 2}
-  - {fileID: 11400000, guid: 60fb96ffc10a4c345b5096dbd950d3d9, type: 2}
+  itemData: []
+--- !u!114 &1114973907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114973900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c412192161e69ed4da6853e5ed415efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcPerson:
+  - {fileID: 1795822373}
+  questData:
+  - {fileID: 11400000, guid: 476a822720617e9468b0037fc116093a, type: 2}
+  curNpc: {fileID: 0}
+  curQuest:
+    questId: 0
+    type: 0
+    status: 0
+    questName: 
+    questDetail: 
+    questItemId: 0
+    questDialogue: []
+    answerNext: []
+    answerAccept: 
+    answerReject: 
+    rewardItemId: 0
+    rewardExp: 0
+    questionInProgress: 
+    answerFinish: 
+    answerNotFinish: 
 --- !u!1 &1115822571
 GameObject:
   m_ObjectHideFlags: 0
@@ -10416,6 +10445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 140808, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10461,6 +10494,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+--- !u!114 &1795822373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4455281019070204384, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+  m_PrefabInstance: {fileID: 1795822372}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853b2d2de9db85b4d87de2f3ce9c54f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810481211
 GameObject:
   m_ObjectHideFlags: 0

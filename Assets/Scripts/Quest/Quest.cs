@@ -25,7 +25,7 @@ public class Quest
     }
 
     [SerializeField] private QuestType type;
-    public QuestType Tyoe
+    public QuestType Type
     {
         get { return type; }
     }
