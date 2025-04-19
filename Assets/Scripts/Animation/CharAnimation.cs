@@ -35,6 +35,9 @@ public class CharAnimation : MonoBehaviour
             case CharState.WalkToMagicCast:
                 c.Anim.SetBool("IsWalk", true);
                 break;
+            case CharState.WalkToNPC:
+                c.Anim.SetBool("IsWalk", true);
+                break;
         }
     }
 }
