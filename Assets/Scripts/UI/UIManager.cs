@@ -174,4 +174,90 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
+    private void ClearDialogueBox()
+    {
+        npcImage.sprite = null;
+
+        npcNameText.text = "";
+        dialogueText.text = "";
+
+        btnNextText.text = "";
+        btnNext.SetActive(false);
+
+        btnAcceptText.text = "";
+        btnAccept.SetActive(false);
+
+        btnRejectText.text = "";
+        btnReject.SetActive(false);
+
+        btnFinishText.text = "";
+        btnFinish.SetActive(false);
+
+        btnNotFinishText.text = "";
+        btnNotFinish.SetActive(false);
+    }
+
+    private void StartQuestDialogue(Quest quest)
+    {
+        dialogueText.text = quest.QuestDialogue[index];
+
+        btnNext.SetActive(true);
+        btnNextText.text = quest.AnswerNext[index];
+
+        btnAccept.SetActive(false);
+        btnReject.SetActive(false);
+    }
+
+    private void SetupDialoguePanel(Npc npc)
+    {
+        index = 0;
+
+        npcImage.sprite = npc.AvatarPic;
+        npcNameText.text = npc.CharName;
+
+        Quest inProgressQuest = QuestManager.instance.CheckForQuest(npc, QuestStatus.InProgress);
+
+        if(inProgressQuest != null) //There is an In-Progress Quest going on
+        {
+            Debug.Log($"in-progress: {inProgressQuest}");
+            dialogueText.text = inProgressQuest.QuestionInProgress;
+
+            bool hasItem = QuestManager.instance.CheckIfFinishQuest();
+            Debug.Log(hasItem);
+
+            if(hasItem) //has iten to finish quest
+            {
+                btnFinishText.text = inProgressQuest.AnswerFinish;
+                btnFinish.SetActive(true);
+            }
+            else
+            {
+                btnNotFinishText.text = inProgressQuest.AnswerNotFinish;
+                btnNotFinish.SetActive(true);
+            }
+        }
+        else //Check for new quest
+        {
+            Quest newQuest = QuestManager.instance.CheckForQuest(npc, QuestStatus.New);
+            Debug.Log(newQuest);
+
+            if (newQuest != null)//There is a new quest
+                StartQuestDialogue(newQuest);
+        }
+    }
+
+    private void ToggleDialogueBox(bool flag)
+    {
+        downPanel.SetActive(!flag);
+        npcDialoguePanel.SetActive(flag);
+        togglePauseUnpause.isOn = flag;
+    }
+
+    public void PrepareDialogueBox(Npc npc)
+    {
+        ClearDialogueBox();
+        SetupDialoguePanel(npc);
+        ToggleDialogueBox(true);
+    }
 }
