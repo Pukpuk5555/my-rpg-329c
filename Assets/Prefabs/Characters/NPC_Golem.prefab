@@ -1875,11 +1875,10 @@ GameObject:
   - component: {fileID: -1066545404598890424}
   - component: {fileID: -2325891182830684340}
   - component: {fileID: 1827205492892091890}
-  - component: {fileID: -3869549422129067962}
   - component: {fileID: 4455281019070204384}
   m_Layer: 6
   m_Name: NPC_Golem
-  m_TagString: Enemy
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1996,19 +1995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002cd71b4f434fa4bbf04c6b28242e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3869549422129067962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fbe6ef47b96c2e408d9b9e59e26f47d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curEnemy: {fileID: 0}
 --- !u!114 &4455281019070204384
 MonoBehaviour:
   m_ObjectHideFlags: 0

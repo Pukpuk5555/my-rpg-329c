@@ -7825,7 +7825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcPerson:
-  - {fileID: 1795822373}
+  - {fileID: 0}
   questData:
   - {fileID: 11400000, guid: 476a822720617e9468b0037fc116093a, type: 2}
   curNpc: {fileID: 0}
@@ -10286,6 +10286,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475448620}
   m_CullTransparentMesh: 1
+--- !u!1001 &1480085352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 140808, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_Name
+      value: NPC_Golem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.998169
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
 --- !u!1001 &1483208407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12132,78 +12189,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776252089}
   m_CullTransparentMesh: 1
---- !u!1001 &1795822372
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 140808, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_Name
-      value: NPC_Golem
-      objectReference: {fileID: 0}
-    - target: {fileID: 140808, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_TagString
-      value: NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 471940, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
---- !u!114 &1795822373 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4455281019070204384, guid: 692855077db6b2e49a7a4fda03e66180, type: 3}
-  m_PrefabInstance: {fileID: 1795822372}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853b2d2de9db85b4d87de2f3ce9c54f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1810481211
 GameObject:
   m_ObjectHideFlags: 0
@@ -14120,6 +14105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_Golem 1
       objectReference: {fileID: 0}
+    - target: {fileID: 140808, guid: 8bac11058246c6242bf2d85a615e0820, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 471940, guid: 8bac11058246c6242bf2d85a615e0820, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.59
@@ -14398,4 +14387,4 @@ SceneRoots:
   - {fileID: 2096190721}
   - {fileID: 991262805}
   - {fileID: 662360660}
-  - {fileID: 1795822372}
+  - {fileID: 1480085352}
