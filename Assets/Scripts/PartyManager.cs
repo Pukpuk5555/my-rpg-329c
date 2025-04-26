@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class PartyManager : MonoBehaviour
 {
@@ -118,5 +119,16 @@ public class PartyManager : MonoBehaviour
             selectChars.Remove(members[i]);
             members[i].ToggleSelection(false);
         }
+    }
+
+    public void RemoveHeroFromParty(int id)
+    {
+        if(id == -1 || id == 0)
+            return;
+
+        if (selectChars.Contains(members[id]))
+            selectChars.Remove(members[id]);
+
+        members.Remove(members[id]);
     }
 }
