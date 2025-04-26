@@ -58,11 +58,23 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text btnNotFinishText;
 
+    [SerializeField] private Toggle[] toggleAvatar;
+    public Toggle[] ToggleAvatar
+    {
+        get { return toggleAvatar; }
+        set { toggleAvatar = value; }
+    }
+
     public static UIManager instance;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        MapToggleAvatar();
     }
 
     private void Update()
@@ -259,5 +271,34 @@ public class UIManager : MonoBehaviour
         ClearDialogueBox();
         SetupDialoguePanel(npc);
         ToggleDialogueBox(true);
+    }
+
+    public void MapToggleAvatar()
+    {
+        foreach (Toggle t in toggleAvatar)
+        {
+            t.gameObject.SetActive(false);
+        }
+
+        for (int i = 0; i < PartyManager.instance.Members.Count; i++)
+        {
+            toggleAvatar[i].gameObject.SetActive(true);
+        }
+
+        toggleAvatar[0].isOn = true; //Select first hero
+    }
+
+    public void SelectHeroByAvater(int i) //map with toggle
+    {
+        if (toggleAvatar[i].isOn)
+        {
+            Debug.Log($"is on: {i}");
+            PartyManager.instance.SelectSingleHeroByToggle(i);
+        }
+        else //usOn is false
+        {
+            Debug.Log($"is off: {i}");
+            PartyManager.instance.UnSelectSingleHeroToggle(i);
+        }
     }
 }
