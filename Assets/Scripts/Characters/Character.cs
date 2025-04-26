@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEditor;
+using TMPro;
+using UnityEngine.UI;
 
 public enum CharState
 {
@@ -47,6 +47,7 @@ public abstract class Character : MonoBehaviour
     public float AttackRange { get { return attackDamage; } }
     
     [SerializeField] protected int attackDamage = 3;
+    public int AttackDamage { get { return attackDamage; } }
 
     [SerializeField] protected float attackCoolDown = 2f;
     [SerializeField] protected float attackTimer = 0f;
@@ -84,14 +85,14 @@ public abstract class Character : MonoBehaviour
     { get { return mainWeapon; } set { mainWeapon = value; } }
 
     [SerializeField] protected Item shield;
-    public Item Shield
-    { get { return shield; } set { shield = value; } }
+    public Item Shield { get { return shield; } set { shield = value; } }
 
     [SerializeField] protected Transform shieldHand;
 
     [SerializeField] protected GameObject shieldObj;
 
     [SerializeField] protected int defensePower = 0;
+    public int DefensePower {  get { return defensePower; } }
 
     protected VFXManager vfxManager;
     protected UIManager uiManager;
