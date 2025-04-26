@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class QuestManager : MonoBehaviour
 {
@@ -67,4 +68,24 @@ public class QuestManager : MonoBehaviour
 
         return success;
     }
+    
+    public bool CheckLastDialogue(int i)
+    {
+        if (i == curQuest.QuestDialogue.Length - 1)
+            return true;
+        else
+            return false;
+    }
+
+    public string NextDialogue(int i) //map with ButtonNext
+    {
+        if (i < curQuest.QuestDialogue.Length)
+            return curQuest.QuestDialogue[i];
+        else
+        {
+            return "";
+        }
+    }
+    
+    
 }
