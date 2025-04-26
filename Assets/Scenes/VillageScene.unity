@@ -7103,6 +7103,22 @@ MonoBehaviour:
   - {fileID: 1191599824}
   - {fileID: 303274932}
   - {fileID: 1459781162}
+  downPanel: {fileID: 1626165573}
+  npcDialoguePanel: {fileID: 1260151177}
+  npcImage: {fileID: 290777983}
+  npcNameText: {fileID: 1823664545}
+  dialogueText: {fileID: 1371181769}
+  index: 0
+  btnNext: {fileID: 498861296}
+  btnNextText: {fileID: 961584301}
+  btnAccept: {fileID: 1726841784}
+  btnAcceptText: {fileID: 1392682774}
+  btnReject: {fileID: 192276390}
+  btnRejectText: {fileID: 128649537}
+  btnFinish: {fileID: 1283400872}
+  btnFinishText: {fileID: 727612980}
+  btnNotFinish: {fileID: 154188880}
+  btnNotFinishText: {fileID: 1585619877}
 --- !u!1001 &1005297692
 PrefabInstance:
   m_ObjectHideFlags: 0

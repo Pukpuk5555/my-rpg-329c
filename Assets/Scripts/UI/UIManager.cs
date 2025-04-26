@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -24,6 +25,38 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject itemUIPrefabs;
 
     [SerializeField] private GameObject[] slots;
+
+    [SerializeField] private GameObject downPanel;
+
+    [SerializeField] private GameObject npcDialoguePanel;
+
+    [SerializeField] private Image npcImage;
+
+    [SerializeField] private TMP_Text npcNameText;
+
+    [SerializeField] private TMP_Text dialogueText;
+
+    [SerializeField] private int index; //dialogue step
+
+    [SerializeField] private GameObject btnNext;
+
+    [SerializeField] private TMP_Text btnNextText;
+
+    [SerializeField] private GameObject btnAccept;
+
+    [SerializeField] private TMP_Text btnAcceptText;
+
+    [SerializeField] private GameObject btnReject;
+
+    [SerializeField] private TMP_Text btnRejectText;
+
+    [SerializeField] private GameObject btnFinish;
+
+    [SerializeField] private TMP_Text btnFinishText;
+
+    [SerializeField] private GameObject btnNotFinish;
+
+    [SerializeField] private TMP_Text btnNotFinishText;
 
     public static UIManager instance;
 
