@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -37,7 +38,7 @@ public class LeftClick : MonoBehaviour
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
 
-            //ClearEverything();
+            ClearEverything();
         }
 
         //mouse hold down
@@ -54,7 +55,7 @@ public class LeftClick : MonoBehaviour
         }
     }
 
-    private void SelectCharacter(RaycastHit hit)
+    private int SelectCharacter(RaycastHit hit)
     {
         ClearEverything();
         
@@ -62,7 +63,9 @@ public class LeftClick : MonoBehaviour
         Debug.Log("Select Char: " + hit.collider.gameObject);
 
         int i = PartyManager.instance.FindIndexFromClass(hero);
+        Debug.Log($"Click Release: {i}");
         UIManager.instance.ToggleAvatar[i].isOn = true;
+        return i;
     }
 
     private void TrySelect(Vector2 screenPos)
@@ -70,16 +73,21 @@ public class LeftClick : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(screenPos);
         RaycastHit hit;
 
+        int i = 0;
+
         if (Physics.Raycast(ray, out hit, 1000, layerMask))
         {
             switch (hit.collider.tag)
             {
                 case "Player":
-                    case "Hero":
-                    SelectCharacter(hit);
+                case "Hero":
+                    i = SelectCharacter(hit);
                     break;
             }
         }
+
+        if (PartyManager.instance.SelectChars.Count == 0)
+            UIManager.instance.ToggleAvatar[i].isOn = true;
     }
 
     private void ClearRingSelection()
@@ -145,12 +153,12 @@ public class LeftClick : MonoBehaviour
             if((unitPos.x > corner1.x && unitPos.x < corner2.x)
                 && (unitPos.y > corner1.y && unitPos.y < corner2.y))
             {
-                PartyManager.instance.SelectChars.Add(member);
-                member.ToggleSelection(true);
+                int i = PartyManager.instance.FindIndexFromClass(member);
+                Debug.Log($"Drag: {i}");
+                UIManager.instance.ToggleAvatar[i].isOn = true;
             }
-
-            //clear selection Box's size
-            boxSelection.sizeDelta = new Vector2(0, 0);
         }
+        //clear selection Box's size
+        boxSelection.sizeDelta = new Vector2(0, 0);
     }
 }

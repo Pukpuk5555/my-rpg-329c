@@ -311,12 +311,14 @@ public class UIManager : MonoBehaviour
 
     public void SelectHeroByAvater(int i) //map with toggle
     {
+        Debug.Log($"Toggle: {i} is working.");
+        
         if (toggleAvatar[i].isOn)
         {
             Debug.Log($"is on: {i}");
             PartyManager.instance.SelectSingleHeroByToggle(i);
         }
-        else //usOn is false
+        else //isOn is false
         {
             Debug.Log($"is off: {i}");
             PartyManager.instance.UnSelectSingleHeroToggle(i);

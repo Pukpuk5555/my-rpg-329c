@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cd5d12a-aa6d-4a66-a70f-fbe6478b947e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-rpg-329c/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-rpg-329c/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VillageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VillageScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PartyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PartyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-rpg-329c/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Command/LeftClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Command/LeftClick.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +88,7 @@
       <workItem from="1743841127638" duration="2314000" />
       <workItem from="1745048750258" duration="6218000" />
       <workItem from="1745652779872" duration="6553000" />
+      <workItem from="1746258813415" duration="434000" />
     </task>
     <servers />
   </component>
