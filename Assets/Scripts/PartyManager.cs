@@ -11,6 +11,9 @@ public class PartyManager : MonoBehaviour
     [SerializeField]
     private List<Character> selectChars = new List<Character>();
     public List<Character> SelectChars { get { return selectChars; } }
+    
+    [SerializeField] private int partyMoney = 1000;
+    public int PartyMoney { get { return partyMoney; } set { partyMoney = value; } }
 
     public static PartyManager instance;
 

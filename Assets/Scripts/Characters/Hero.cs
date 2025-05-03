@@ -26,12 +26,6 @@ public class Hero : Character
     [SerializeField] private int charisma;
     public int Charisma {  get { return charisma; } set { charisma = value; } }
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -52,6 +46,23 @@ public class Hero : Character
             case CharState.WalkToNPC:
                 WalkToNPCUpdate();
                 break;
+        }
+    }
+    protected void WalkToNPCUpdate()
+    {
+        float distance = Vector3.Distance(transform.position, curCharTarget.transform.position);
+
+        if(distance <= 2f)
+        {
+            navMeshAgent.isStopped = true;
+            SetState(CharState.Idle);
+
+            Npc npc = curCharTarget.GetComponent<Npc>();
+
+            if(npc.IsShopKeeper)
+                uiManager.PrepareShopPanel(npc, this);
+            else
+                uiManager.PrepareDialogueBox(npc);
         }
     }
 }
