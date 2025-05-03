@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -557,5 +558,46 @@ public class UIManager : MonoBehaviour
         SetupShopItem(npc);
         SetupPartyItems(hero);
         ToggleShopPanel(true);
+    }
+
+    public void SellItemToShop()
+    {
+        totalPrice = 0;
+        List<GameObject> toSellCardList = new List<GameObject>();
+
+        foreach (GameObject obj in partyItemList)
+        {
+            ItemInShop itemInShop = obj.GetComponent<ItemInShop>();
+            if (itemInShop.IconToggle.isOn)
+            {
+                toSellCardList.Add(obj);
+                totalPrice += (int)(itemInShop.Item.NormalPrice * 0.8f);
+            }
+        }
+
+        if (toSellCardList.Count == 0)
+            return;
+
+        if (curShopNpc.NpcMoney >= totalPrice)
+        {
+            foreach (GameObject obj in toSellCardList)
+            {
+                obj.transform.SetParent(shopListParent);
+                ItemInShop itemInShop = obj.GetComponent<ItemInShop>();
+                itemInShop.IconToggle.isOn = false;
+                itemInShop.SetupItemInShop(this, 1f);
+
+                partyItemList.Remove(obj);
+                shopItemList.Add(obj);
+                curShopHero.InventoryItems[itemInShop.ID] = null;
+                curShopNpc.ShopItems.Add(itemInShop.Item);
+            }
+
+            curShopNpc.NpcMoney -= totalPrice;
+            PartyManager.instance.PartyMoney += totalPrice;
+
+            shopMoneyText.text = curShopNpc.NpcMoney.ToString();
+            heroMoneyText.text = PartyManager.instance.PartyMoney.ToString();
+        }
     }
 }
