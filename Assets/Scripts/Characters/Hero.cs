@@ -65,4 +65,16 @@ public class Hero : Character
                 uiManager.PrepareDialogueBox(npc);
         }
     }
+
+    public void SaveItemInInventory(Item item)
+    {
+        for (int i = 0; i < 16; i++)
+        {
+            if (InventoryItems[i] == null)
+            {
+                InventoryItems[i] = item;
+                return;
+            }
+        }
+    }
 }
