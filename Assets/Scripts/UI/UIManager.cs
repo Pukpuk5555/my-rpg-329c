@@ -600,4 +600,44 @@ public class UIManager : MonoBehaviour
             heroMoneyText.text = PartyManager.instance.PartyMoney.ToString();
         }
     }
+
+    public void BuyItemFromShop()
+    {
+        totalCost = 0;
+        List<GameObject> toBuyCardList = new List<GameObject>();
+
+        foreach (GameObject obj in shopItemList)
+        {
+            ItemInShop itemInShop = obj.GetComponent<ItemInShop>();
+            if(itemInShop.IconToggle.isOn)
+            {
+                toBuyCardList.Add(obj);
+                totalCost += itemInShop.Item.NormalPrice;
+            }
+        }
+
+        if (toBuyCardList.Count == 0)
+            return;
+
+        if(PartyManager.instance.PartyMoney >= totalCost)
+        {
+            foreach (GameObject obj in toBuyCardList)
+            {
+                obj.transform.SetParent(partyListParent);
+                ItemInShop itemInShop = obj.GetComponent<ItemInShop>();
+                itemInShop.IconToggle.isOn = false;
+                itemInShop.SetupItemInShop(this, 0.8f);
+
+                shopItemList.Remove(obj);
+                partyItemList.Add(obj);
+                curShopNpc.ShopItems.Remove(itemInShop.Item);
+                curShopHero.SaveItemInInventory(itemInShop.Item);
+            }
+            curShopNpc.NpcMoney += totalCost;
+            PartyManager.instance.PartyMoney -= totalCost;  
+
+            shopMoneyText.text = curShopNpc.NpcMoney.ToString();
+            heroMoneyText.text = PartyManager.instance.PartyMoney.ToString();
+        }
+    }
 }
