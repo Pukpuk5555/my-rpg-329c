@@ -7,17 +7,11 @@ public class InventoryManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] itemPrefabs;
     public GameObject[] ItemPrefabs
-    {
-        get { return itemPrefabs; }
-        set { itemPrefabs = value; }
-    }
+    { get { return itemPrefabs; } set { itemPrefabs = value; } }
 
     [SerializeField] private ItemData[] itemData;
     public ItemData[] ItemDatas
-    {
-        get { return itemData; }
-        set { itemData = value; }
-    }
+    { get { return itemData; } set { itemData = value; } }
 
     public const int MAXSLOT = 17;
 
@@ -34,12 +28,6 @@ public class InventoryManager : MonoBehaviour
         AddItemShopToNpc(1, 0);
         AddItemShopToNpc(1, 3);
         AddItemShopToNpc(1, 4);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public bool AddItem(Character character, int id)
@@ -111,5 +99,35 @@ public class InventoryManager : MonoBehaviour
     {
         Item item = new Item(itemData[itemId]);
         QuestManager.instance.NpcPerson[npcId].ShopItems.Add(item);
+    }
+
+    private void SpawnDropItem(Item item, Vector3 pos)
+    {
+        int id;
+
+        switch(item.Type)
+        {
+            case ItemType.Consumable:
+                id = 1;
+                break;
+            default:
+                id = 0;
+                break;
+        }
+
+        GameObject itemobj = Instantiate(itemPrefabs[id], pos, Quaternion.identity);
+        itemobj.AddComponent<ItemPick>();
+
+        ItemPick itemPick = itemobj.GetComponent<ItemPick>();
+        itemPick.Init(item, instance, PartyManager.instance);
+    }
+
+    public void SpawnDropInventory(Item[] items, Vector3 pos)
+    {
+        for(int i = 0; i < items.Length; i++)
+        {
+            if (items[i] != null)
+                SpawnDropItem(items[i], pos);
+        }
     }
 }

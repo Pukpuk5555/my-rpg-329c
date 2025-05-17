@@ -239,6 +239,23 @@ public abstract class Character : MonoBehaviour
         
         anim.SetTrigger("Die");
 
+        //Spawn Item on ground
+        Vector3 origin = transform.position + Vector3.up * 2f;
+        RaycastHit hit;
+
+        if(Physics.Raycast(origin, Vector3.down, out hit, 5f))
+        {
+            Vector3 spawnPos = hit.point + Vector3.up * 1f;
+            invManager.SpawnDropInventory(inventoryItems, spawnPos);
+            Debug.Log("RayCast Spawn.");
+        }
+        else
+        {
+            Vector3 fallBackPos = transform.position + Vector3.up * 1f;
+            invManager.SpawnDropInventory(inventoryItems, fallBackPos);
+            Debug.Log("Normal Spawn.");
+        }
+
         StartCoroutine(DestroyObject());
     }
 
