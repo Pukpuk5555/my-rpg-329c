@@ -104,12 +104,13 @@ public abstract class Character : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void charInit(VFXManager vfxM, UIManager uiM)
+    public void CharInit(VFXManager vfxM, UIManager uiM, InventoryManager invM)
     {
         vfxManager = vfxM;
         uiManager = uiM;
+        invManager = invM;
 
-        inventoryItems = new Item[16];
+        inventoryItems = new Item[InventoryManager.MAXSLOT];
     }
 
     public void SetState(CharState s)

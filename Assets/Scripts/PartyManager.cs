@@ -27,7 +27,7 @@ public class PartyManager : MonoBehaviour
     {
         foreach(Character c in members)
         {
-            c.charInit(VFXManager.instance, UIManager.instance);
+            c.CharInit(VFXManager.instance, UIManager.instance, InventoryManager.instance);
         }
 
         SelectSingleHero(0);
