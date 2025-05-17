@@ -11711,12 +11711,18 @@ MonoBehaviour:
   - {fileID: 156772, guid: 72e2ffc6019dfa24b8832b5cf4a9b921, type: 3}
   - {fileID: 149276, guid: 61d808fe403d0364e9f34b6850a070c0, type: 3}
   - {fileID: 129334, guid: c9e6334800a08c04faeab26e744f3fe7, type: 3}
+  - {fileID: 115104, guid: 83e2a7ef2cc32df4197bd8d55127c2ee, type: 3}
+  - {fileID: 166544, guid: d3ca7501235dd614880508b9f1882398, type: 3}
+  - {fileID: 2608979363868593347, guid: f8b05a5ba62692b40935537f6f2800cc, type: 3}
   itemData:
   - {fileID: 11400000, guid: f2aa937274cc1ff4881eae0da0600216, type: 2}
   - {fileID: 11400000, guid: 444a0857b7e353a408bf8ad77ffab1e3, type: 2}
   - {fileID: 11400000, guid: e48304c075dd38447a49caf74494a31d, type: 2}
   - {fileID: 11400000, guid: 1af23a5514b557a41955d4e5d70bb815, type: 2}
   - {fileID: 11400000, guid: 60fb96ffc10a4c345b5096dbd950d3d9, type: 2}
+  - {fileID: 11400000, guid: e3665e3f77fbbea448798db6100acd10, type: 2}
+  - {fileID: 11400000, guid: 5c38f8259c2f5b74bb27cebd26c2fa61, type: 2}
+  - {fileID: 11400000, guid: 7a83a4a40d809b640b87ddf7855ebd5d, type: 2}
 --- !u!114 &1114973907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15183,6 +15189,10 @@ PrefabInstance:
       propertyPath: itemType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3640423775073612036, guid: d20a0b98a99b0b140baf25119baba863, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1114973906}
     - target: {fileID: 5400352419515931114, guid: d20a0b98a99b0b140baf25119baba863, type: 3}
       propertyPath: m_Name
       value: SlotSheild
