@@ -130,6 +130,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        InitSlots();
         MapToggleAvatar();
     }
 
@@ -226,7 +227,19 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < hero.InventoryItems.Length; i++)
         {
             GameObject itemObj = Instantiate(itemUIPrefabs, slots[i].transform);
-            itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
+            ItemDrag itemDrag = itemObj.GetComponent<ItemDrag>();
+
+            itemDrag.Item = hero.InventoryItems[i];
+            itemDrag.IconParent = slots[i].transform;
+            itemDrag.Image.sprite = hero.InventoryItems[i].Icon;
+        }
+    }
+
+    private void InitSlots()
+    {
+        for(int i = 0; i < InventoryManager.MAXSLOT; i++)
+        {
+            slots[i].GetComponent<InventorySlot>().ID = i;
         }
     }
 

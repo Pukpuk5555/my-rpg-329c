@@ -11708,7 +11708,12 @@ MonoBehaviour:
   - {fileID: 149276, guid: 61d808fe403d0364e9f34b6850a070c0, type: 3}
   - {fileID: 129334, guid: c9e6334800a08c04faeab26e744f3fe7, type: 3}
   - {fileID: 156772, guid: 72e2ffc6019dfa24b8832b5cf4a9b921, type: 3}
-  itemData: []
+  itemData:
+  - {fileID: 11400000, guid: f2aa937274cc1ff4881eae0da0600216, type: 2}
+  - {fileID: 11400000, guid: 444a0857b7e353a408bf8ad77ffab1e3, type: 2}
+  - {fileID: 11400000, guid: e48304c075dd38447a49caf74494a31d, type: 2}
+  - {fileID: 11400000, guid: 1af23a5514b557a41955d4e5d70bb815, type: 2}
+  - {fileID: 11400000, guid: 60fb96ffc10a4c345b5096dbd950d3d9, type: 2}
 --- !u!114 &1114973907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22209,7 +22214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 140808, guid: 8bac11058246c6242bf2d85a615e0820, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 471940, guid: 8bac11058246c6242bf2d85a615e0820, type: 3}
       propertyPath: m_LocalPosition.x
